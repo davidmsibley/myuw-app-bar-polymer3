@@ -1,5 +1,6 @@
 {
-  "name": "myuw-app-bar",
+  "name": "@davidmsibley/myuw-app-bar",
+  "version": "0.1.0",
   "main": "myuw-app-bar.js",
   "dependencies": {
     "@polymer/app-layout": "^3.0.0-pre.18",
