@@ -22,16 +22,22 @@ class MyuwAppBar extends PolymerElement {
   static get template() {
     return html`
       <style>
-        :host {
-          display: block;
-        }
         app-header {
           background-color: #00552a;
+          font-family: 'Roboto', 'Noto', sans-serif;
           color: #fff;
         }
         app-header a {
           text-decoration: inherit;
           color: inherit;
+        }
+        app-drawer-layout {
+          --app-drawer-layout-content-transition: margin 0.2s;
+        }
+        app-drawer {
+          --app-drawer-content-container: {
+            background-color: #eee;
+          }
         }
         paper-icon-button {
           --paper-icon-button-ink-color: white;
@@ -42,6 +48,11 @@ class MyuwAppBar extends PolymerElement {
         paper-item {
           cursor: pointer;
         }
+        .drawer-content {
+          margin-top: 80px;
+          height: calc(100% - 80px);
+          overflow: auto;
+        }
       </style>
       <app-header-layout>
         <app-header slot="header" reveals>
@@ -51,7 +62,9 @@ class MyuwAppBar extends PolymerElement {
         </app-header>
         <app-drawer-layout>
           <app-drawer class="genre-drawer" slot="drawer">
-            <slot name="drawer">Hello from drawer</slot>
+            <div class="drawer-content">
+              <slot name="drawer">Hello from drawer</slot>
+            </div>
           </app-drawer>
         <slot name="main">Hello from main</slot>
         </app-drawer-layout>
