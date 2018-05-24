@@ -1,5 +1,8 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
+import '@polymer/iron-icons/iron-icons.js';
+import '@polymer/paper-item/paper-icon-item.js';
+import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-dialog/paper-dialog.js';
 import '@polymer/paper-styles/default-theme.js';
 import '@polymer/app-layout/helpers/helpers.js';
