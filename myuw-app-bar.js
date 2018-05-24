@@ -43,19 +43,19 @@ class MyuwAppBar extends PolymerElement {
           cursor: pointer;
         }
       </style>
-      <app-drawer-layout>
-        <app-drawer class="genre-drawer" slot="drawer">
-          <slot name="drawer"></slot>
-        </app-drawer>
-        <app-header-layout>
-          <app-header slot="header" reveals>
-            <app-toolbar>
-              <div main-title>[[pageTitle]]</div>
-            </app-toolbar>
-          </app-header>
-          <slot name="main"></slot>
-        </app-header-layout>
-      </app-drawer-layout>
+      <app-header-layout>
+        <app-header slot="header" reveals>
+          <app-toolbar>
+            <div main-title>[[pageTitle]]</div>
+          </app-toolbar>
+        </app-header>
+        <app-drawer-layout>
+          <app-drawer class="genre-drawer" slot="drawer">
+            <slot name="drawer">Hello from drawer</slot>
+          </app-drawer>
+        <slot name="main">Hello from main</slot>
+        </app-drawer-layout>
+      </app-header-layout>
     `;
   }
   static get properties() {
