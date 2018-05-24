@@ -1,5 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
+import '@polymer/paper-dialog/paper-dialog.js';
+import '@polymer/paper-styles/default-theme.js';
 import '@polymer/app-layout/helpers/helpers.js';
 import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
@@ -63,7 +65,27 @@ class MyuwAppBar extends PolymerElement {
         <app-drawer-layout>
           <app-drawer class="genre-drawer" slot="drawer">
             <div class="drawer-content">
-              <slot name="drawer">Hello from drawer</slot>
+            <paper-icon-item>
+              <iron-icon icon="inbox" slot="item-icon"></iron-icon> <span>Inbox</span>
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon icon="query-builder" slot="item-icon"></iron-icon> <span>Snoozed</span>
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon icon="done" slot="item-icon"></iron-icon> <span>Done</span>
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon icon="drafts" slot="item-icon"></iron-icon> <span>Drafts</span>
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon icon="send" slot="item-icon"></iron-icon> <span>Sent</span>
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon icon="delete" slot="item-icon"></iron-icon> <span>Trash</span>
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon icon="report" slot="item-icon"></iron-icon> <span>Spam</span>
+            </paper-icon-item>
             </div>
           </app-drawer>
         <slot name="main">Hello from main</slot>

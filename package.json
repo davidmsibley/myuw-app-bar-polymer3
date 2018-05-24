@@ -3,6 +3,9 @@
   "main": "myuw-app-bar.js",
   "dependencies": {
     "@polymer/app-layout": "^3.0.0-pre.18",
+    "@polymer/iron-icon": "^3.0.0-pre.18",
+    "@polymer/paper-dialog": "^3.0.0-pre.18",
+    "@polymer/paper-styles": "^3.0.0-pre.18",
     "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {
